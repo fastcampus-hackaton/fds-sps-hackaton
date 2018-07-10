@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react";
-import { DataProvider } from "./contexts/DataConctext";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { DataProvider } from "./contexts/DataContext";
+import Reserve from "./components/Reserve";
 
 class App extends Component {
   render() {
@@ -8,14 +9,20 @@ class App extends Component {
       <BrowserRouter>
         <DataProvider>
           <div className="App">
-            <Route exact path="/" componet={Home} />
-            <Route path="/home" componet={Home} />
-            <Route path="/step/1" componet={Step1} />
+            <Switch>
+              <Route path="/home" component={Home} />
+              <Route path="/reserve" component={Reserve} />
+              <Route exact path="/" component={Home} />
+            </Switch>
           </div>
         </DataProvider>
       </BrowserRouter>
     );
   }
+}
+
+function Home() {
+  return <div />;
 }
 
 export default App;

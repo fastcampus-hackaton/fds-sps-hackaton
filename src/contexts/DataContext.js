@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const { Provider, Consumer } = React.createContext;
+const { Provider, Consumer } = React.createContext();
 
 class DataProvider extends Component {
   state = {
