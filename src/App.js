@@ -29,8 +29,4 @@ class App extends Component {
   }
 }
 
-function Home() {
-  return <div />;
-}
-
 export default App;

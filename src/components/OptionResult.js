@@ -2,6 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 
 export default class OptionResult extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     const settings = {
       dots: true,
@@ -59,7 +62,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절1</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -69,7 +72,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절2</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -79,7 +82,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절3</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -89,7 +92,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절4</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -99,7 +102,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절5</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -109,7 +112,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절6</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
             </Slider>
@@ -144,7 +147,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절1</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -154,7 +157,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절2</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -164,7 +167,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절3</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -174,7 +177,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절4</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -184,7 +187,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절5</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -194,7 +197,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절6</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
             </Slider>
@@ -231,7 +234,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절1</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -241,7 +244,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절2</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -251,7 +254,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절3</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -261,7 +264,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절4</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -271,7 +274,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절5</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
               <div className="tile is-parent test">
@@ -281,7 +284,7 @@ export default class OptionResult extends React.Component {
                   </figure>
                   <p className="title">산책 예절6</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button">Buy Tickets</a>
+                  <a className="button is-primary is-outlined">교육하러 가기</a>
                 </article>
               </div>
             </Slider>

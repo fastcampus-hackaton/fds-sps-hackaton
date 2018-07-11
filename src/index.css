@@ -10670,7 +10670,7 @@ label.panel-block:hover {
 }
 
 .wrapper .suggest-section {
-  margin-bottom: 30px;
+  margin: 80px auto;
 }
 
 .wrapper .test {
@@ -10680,7 +10680,7 @@ label.panel-block:hover {
 }
 
 .wrapper .guideline {
-  margin-bottom: 10px;
+  margin: 80px auto;
 }
 
 .wrapper .behavior {

@@ -1,6 +1,9 @@
 import React from "react";
 
 export default class VideoResult extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="video-wrapper">
