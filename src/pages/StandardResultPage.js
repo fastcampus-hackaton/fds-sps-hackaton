@@ -1,12 +1,4 @@
-import React from "react";
-
 import StandardResult from "../components/StandardResult";
-import MainLayout from "../components/MainLayout";
+import withLayout from "../hocs/withLayout";
 
-export default function StandardResultPage() {
-  return (
-    <MainLayout>
-      <StandardResult />
-    </MainLayout>
-  );
-}
+export default withLayout(StandardResult)(2);

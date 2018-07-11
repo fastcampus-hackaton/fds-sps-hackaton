@@ -11149,10 +11149,13 @@ em.name {
 
 .reserve-section {
   padding: 3.5em 0;
+  margin: 20px;
+  border-radius: 10px;
   text-align: center;
   font-size: 1.167em;
   -webkit-animation: fadeIn 1s ease-in-out;
           animation: fadeIn 1s ease-in-out;
+  background-color: #fff;
 }
 
 .reserve-section__paragraph {

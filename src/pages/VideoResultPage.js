@@ -1,12 +1,4 @@
-import React from "react";
-
 import VideoResult from "../components/VideoResult";
-import MainLayout from "../components/MainLayout";
+import withLayout from "../hocs/withLayout";
 
-export default function VideoResultPage() {
-  return (
-    <MainLayout>
-      <VideoResult />
-    </MainLayout>
-  );
-}
+export default withLayout(VideoResult)(2);
