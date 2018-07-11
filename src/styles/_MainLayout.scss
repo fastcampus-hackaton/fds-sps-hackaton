@@ -1,0 +1,15 @@
+.header {
+  padding: 0;
+  text-align: center;
+  .title {
+    font-size: 3rem;
+  }
+}
+.footer {
+  width: 100%;
+  padding-bottom: 48px;
+  &-copyright {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
