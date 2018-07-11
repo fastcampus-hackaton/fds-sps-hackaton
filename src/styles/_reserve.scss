@@ -17,9 +17,12 @@ em.name {
 }
 .reserve-section {
   padding: 3.5em 0;
+  margin: 20px;
+  border-radius: 10px;
   text-align: center;
   font-size: 1.167em;
   animation: fadeIn 1s ease-in-out;
+  background-color: #fff;
   &__paragraph {
     margin-top: 1.5em;
   }

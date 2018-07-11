@@ -1,12 +1,4 @@
-import React from "react";
-
 import ReserveInfo from "../components/ReserveInfo";
-import MainLayout from "../components/MainLayout";
+import withLayout from "../hocs/withLayout";
 
-export default function ReserveInfoPage() {
-  return (
-    <MainLayout>
-      <ReserveInfo />
-    </MainLayout>
-  );
-}
+export default withLayout(ReserveInfo)(1);

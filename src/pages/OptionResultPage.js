@@ -1,12 +1,4 @@
-import React from "react";
-
 import OptionResult from "../components/OptionResult";
-import MainLayout from "../components/MainLayout";
+import withLayout from "../hocs/withLayout";
 
-export default function OptionResultPage() {
-  return (
-    <MainLayout>
-      <OptionResult />
-    </MainLayout>
-  );
-}
+export default withLayout(OptionResult)(2);

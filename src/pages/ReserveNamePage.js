@@ -1,14 +1,4 @@
-import React from "react";
-
-import Steps from "../components/Steps";
 import ReserveName from "../components/ReserveName";
-import MainLayout from "../components/MainLayout";
+import withLayout from "../hocs/withLayout";
 
-export default function ReserveNamePage() {
-  return (
-    <MainLayout>
-      <Steps />
-      <ReserveName />
-    </MainLayout>
-  );
-}
+export default withLayout(ReserveName)(0);
