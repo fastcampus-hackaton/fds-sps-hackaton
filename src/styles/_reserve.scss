@@ -1,5 +1,6 @@
 .reserve-title {
-  padding: 3.5em 0 2em;
+  padding-bottom: 2em;
+  font-family: $primary-font;
   font-size: 1.35em;
   line-height: 1.35em;
   text-align: center;
@@ -15,6 +16,7 @@ em.name {
   color: $color-7;
 }
 .reserve-section {
+  padding: 3.5em 0;
   text-align: center;
   font-size: 1.167em;
   animation: fadeIn 1s ease-in-out;

@@ -287,9 +287,15 @@ class ReserveInfo extends Component {
                 이제 <em className="name">{name}</em>의 가이드를 보러갈까요?
               </h2>
               <div className="reserve-button-box">
-                <Link className="reserve-button" to="/result">
-                  Go !!!
-                </Link>
+                {Object.values(myOptions).some(item => item) ? (
+                  <Link className="reserve-button" to="/oresult">
+                    Go !!!
+                  </Link>
+                ) : (
+                  <Link className="reserve-button" to="/result">
+                    Go !!!
+                  </Link>
+                )}
               </div>
             </section>
           </React.Fragment>

@@ -1,14 +1,17 @@
 // reset
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Jua|Nanum+Gothic");
 @import "./normalize";
 
 * {
   box-sizing: border-box;
 }
+$primary-font: "Fredoka One", "Jua", sans-serif;
+$button-font: "Fredoka One", "Nanum Gothic", sans-serif;
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: $font-color;
 }
 a {
