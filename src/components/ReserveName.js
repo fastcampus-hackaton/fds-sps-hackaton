@@ -19,7 +19,9 @@ class ReserveName extends Component {
         <h2 className="reserve-title">
           안녕하세요. "브랜드"가 당신의 반려동물에 맞는 <br />교육가이드를 추천
           해드릴게요.
-          <em>당신의 반려동물을 소개 해줄래요?</em>
+          <em className="reserve-title__em">
+            당신의 반려동물을 소개 해줄래요?
+          </em>
         </h2>
         <label htmlFor="reserve-name">
           내 반려동물의 이름은

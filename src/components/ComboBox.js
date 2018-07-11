@@ -63,7 +63,9 @@ export default class ComboBox extends Component {
           <div className="combobox-menu">
             {options.map(menu => (
               <div
-                className={selected === menu ? "selected" : ""}
+                className={`combobox-menu__item ${
+                  selected === menu ? "selected" : ""
+                }`}
                 key={menu}
                 onClick={e => this.handleSelect(menu)}
               >

@@ -390,15 +390,28 @@ a:link {
   text-align: center;
 }
 
-.reserve-title em {
+.reserve-title__em {
   display: block;
   margin-top: 1.5em;
   font-style: normal;
   color: #7cb305;
 }
 
+em.name {
+  font-style: normal;
+  color: #7cb305;
+}
+
 .reserve-section {
   text-align: center;
+}
+
+.reserve-section__paragraph {
+  margin-top: 1.5em;
+}
+
+.reserve-section .combobox-select {
+  text-align: right;
 }
 
 .reserve-input {

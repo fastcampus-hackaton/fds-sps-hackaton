@@ -85,52 +85,50 @@ class ReserveInfo extends Component {
       <div className="reserve-info">
         <section className="reserve-section">
           <h2 className="reserve-title">
-            이름이 좋네요, {name}의 특징은 뭐에요?
+            이름이 좋네요, <em className="name">{name}</em>의 특징은 뭐에요?
           </h2>
-          <div className="reserve-form__field">
-            <div className="reserve-form__paragraph">
-              {name}는
-              <ComboBox
-                styles={{ width: "150px" }}
-                options={species}
-                defaultText={"멍멍이/고양이"}
-                selected={myPet.species}
-                onSelectItem={this.changeSpecies}
-              />이며,
-              <ComboBox
-                styles={{ width: "200px" }}
-                options={myPet.species === "멍멍이" ? kinds.dogs : kinds.cats}
-                defaultText={"품종을 선택해주세요"}
-                selected={myPet.kind}
-                onSelectItem={this.changeKinds}
-              />
-              에요.
-            </div>
-            <div className="reserve-form__paragraph">
-              성별은
-              <ComboBox
-                options={genders}
-                defaultText={"성별"}
-                selected={myPet.gender}
-                onSelectItem={this.changeGender}
-              />이구요. 나이는
-              <input
-                style={{ width: "50px" }}
-                className="reserve-input"
-                type="number"
-                min="0"
-                value={myPet.agesNum}
-                onChange={this.handleChangeAge}
-                required
-              />
-              <ComboBox
-                options={agesTerm}
-                defaultText={"주/개월/연"}
-                selected={myPet.agesTerm}
-                onSelectItem={this.changeAgesTerm}
-              />
-              정도 되었어요.
-            </div>
+          <div className="reserve-section__paragraph">
+            <em className="name">{name}</em>는
+            <ComboBox
+              styles={{ width: "100px" }}
+              options={species}
+              defaultText={"반려동물"}
+              selected={myPet.species}
+              onSelectItem={this.changeSpecies}
+            />이며,
+            <ComboBox
+              styles={{ width: "200px" }}
+              options={myPet.species === "멍멍이" ? kinds.dogs : kinds.cats}
+              defaultText={"품종을 선택해주세요"}
+              selected={myPet.kind}
+              onSelectItem={this.changeKinds}
+            />
+            에요.
+          </div>
+          <div className="reserve-section__paragraph">
+            성별은
+            <ComboBox
+              options={genders}
+              defaultText={"성별"}
+              selected={myPet.gender}
+              onSelectItem={this.changeGender}
+            />이구요. 나이는
+            <input
+              style={{ width: "50px" }}
+              className="reserve-input"
+              type="number"
+              min="0"
+              value={myPet.agesNum}
+              onChange={this.handleChangeAge}
+              required
+            />
+            <ComboBox
+              options={agesTerm}
+              defaultText={"주/개월/연"}
+              selected={myPet.agesTerm}
+              onSelectItem={this.changeAgesTerm}
+            />
+            정도 되었어요.
           </div>
         </section>
         <section className="reserve-section">

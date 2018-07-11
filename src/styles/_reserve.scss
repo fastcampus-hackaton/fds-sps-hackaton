@@ -2,15 +2,27 @@
   padding: 3em 0;
   font-size: 1.167em;
   text-align: center;
-  em {
+  &__em {
     display: block;
     margin-top: 1.5em;
     font-style: normal;
     color: $color-7;
   }
 }
+em.name {
+  font-style: normal;
+  color: $color-7;
+}
 .reserve-section {
   text-align: center;
+  &__paragraph {
+    margin-top: 1.5em;
+  }
+  .combobox {
+    &-select {
+      text-align: right;
+    }
+  }
 }
 
 .reserve-input {
