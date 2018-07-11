@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { DataProvider } from "./contexts/DataContext";
 import Reserve from "./components/Reserve";
-import StandardResult from "./components/StandardResult";
-import OptionResult from "./components/OptionResult";
-import VideoResult from "./components/VideoResult";
+
+import StandardResultPage from "./pages/StandardResultPage";
+import OptionResultPage from "./pages/OptionResultPage";
+import VideoResultPage from "./pages/VideoResultPage";
 
 class App extends Component {
   render() {
@@ -15,9 +16,9 @@ class App extends Component {
             <Switch>
               <Route path="/home" component={Home} />
               <Route path="/reserve" component={Reserve} />
-              <Route path="/result" component={StandardResult} />
-              <Route path="/oresult" component={OptionResult} />
-              <Route path="/vresult" component={VideoResult} />
+              <Route path="/result" component={StandardResultPage} />
+              <Route path="/oresult" component={OptionResultPage} />
+              <Route path="/vresult" component={VideoResultPage} />
               <Route exact path="/" component={Home} />
             </Switch>
           </div>

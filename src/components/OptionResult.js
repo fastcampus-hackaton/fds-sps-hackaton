@@ -13,7 +13,12 @@ export default class OptionResult extends React.Component {
     return (
       <div class="wrapper">
         <div class="info">
-          <div class="dog-img">test</div>
+          <div class="dog-img">
+            <img
+              src="https://cdn.glitch.com/8cd2401d-8e94-412c-9cda-525965fe1496%2F%EC%8A%A4%ED%94%BC%EC%B8%A0.png?1531287472926"
+              alt="dog"
+            />
+          </div>
           <h2 class="dog-info">
             퐁퐁이의 품종은 스피츠이고 3살이며 마른체형을 가지고 있어요.
           </h2>
