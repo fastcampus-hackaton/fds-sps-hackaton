@@ -10,11 +10,14 @@ export default function Layout(props) {
         <h1 className="logo">
           <Link to="/">FastPet</Link>
         </h1>
+        <span className="sub-title">
+          당신의 반려동물을 위한 교육 추천 가이드
+        </span>
       </header>
-      <div className="contents">
+      <div className="contents-step">
         <Steps current={props.current} />
-        {props.children}
       </div>
+      <div className="contents">{props.children}</div>
       <footer className="footer">
         <div className="content has-text-centered">
           <div className="content has-text-centered">
