@@ -58,6 +58,9 @@ export default class ComboBox extends Component {
             : defaultText
               ? defaultText
               : "옵션을 선택해주세요"}
+          <span className="icon">
+            <i className="fas fa-angle-down" />
+          </span>
         </div>
         {visible && (
           <div className="combobox-menu">

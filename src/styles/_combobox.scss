@@ -1,16 +1,31 @@
+$combobox-color: $color-6;
+$combobox-current-color: #fadb14;
 .combobox {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: left;
+  &:focus {
+    outline: 0;
+    .combobox-select {
+      border-color: $combobox-current-color;
+      .icon {
+        color: $combobox-current-color;
+      }
+    }
+  }
   &-select {
     width: 100%;
     line-height: 1.5;
     padding: 4px 10px;
-    border-bottom: 2px solid $color-6;
+    border-bottom: 2px solid $combobox-color;
     box-sizing: border-box;
     &--default {
       color: #8c8c8c;
+    }
+    .icon {
+      margin-left: 5px;
+      color: $combobox-color;
     }
   }
   &-menu {
@@ -21,5 +36,9 @@
     padding: 4px 10px;
     background-color: #fff;
     z-index: 9;
+    border: 1px solid $combobox-current-color;
+    &__item {
+      padding: 4px;
+    }
   }
 }
