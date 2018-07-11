@@ -31,7 +31,7 @@
 
   .suggest-section {
     border: solid 1px black;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .test {
@@ -46,4 +46,14 @@
     border: solid 1px black;
     margin-bottom: 10px;
   }
+
+  .behavior {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
 }

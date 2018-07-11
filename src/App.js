@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { DataProvider } from "./contexts/DataContext";
 import Reserve from "./components/Reserve";
-import FinalResult from "./components/FinalResult";
+import StandardResult from "./components/StandardResult";
+import OptionResult from "./components/OptionResult";
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
             <Switch>
               <Route path="/home" component={Home} />
               <Route path="/reserve" component={Reserve} />
-              <Route path="/result" component={FinalResult} />
+              <Route path="/result" component={StandardResult} />
+              <Route path="/oresult" component={OptionResult} />
               <Route exact path="/" component={Home} />
             </Switch>
           </div>

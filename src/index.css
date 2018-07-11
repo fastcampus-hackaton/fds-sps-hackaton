@@ -32,7 +32,7 @@
 
 .wrapper .suggest-section {
   border: solid 1px black;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .wrapper .test {
@@ -46,6 +46,16 @@
 .wrapper .guideline {
   border: solid 1px black;
   margin-bottom: 10px;
+}
+
+.wrapper .behavior {
+  width: 350px;
+  height: 350px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
 }
 
 body {
