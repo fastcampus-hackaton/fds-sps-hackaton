@@ -17,7 +17,7 @@ class ReserveName extends Component {
     return (
       <section className="reserve-section">
         <h2 className="reserve-title">
-          안녕하세요. "브랜드"가 당신의 반려동물에 맞는 <br />교육가이드를 추천
+          안녕하세요. FastPet이 당신의 반려동물에 맞는 <br />교육가이드를 추천
           해드릴게요.
           <em className="reserve-title__em">
             당신의 반려동물을 소개 해줄래요?
@@ -37,13 +37,15 @@ class ReserveName extends Component {
           />
           에요.
         </label>
-        {name && (
-          <div className="reserve-button-box">
-            <Link className="reserve-button" to="/step/2">
-              조금 더 소개할까요?
-            </Link>
-          </div>
-        )}
+        <div
+          className={`reserve-button-box ${
+            !name ? "reserve-button-box--disabled" : ""
+          }`}
+        >
+          <Link className="reserve-button" to="/step/2">
+            조금 더 소개할까요?
+          </Link>
+        </div>
       </section>
     );
   }

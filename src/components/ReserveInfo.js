@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ComboBox from "./ComboBox";
+import ReserveOptions from "./ReserveOptions";
 import withData from "../hocs/withData";
 
 class ReserveInfo extends Component {
@@ -35,6 +37,26 @@ class ReserveInfo extends Component {
         body: "두꺼운 지방이 덮여서 갈비 뼈가 쉽게 만질 수 없어요."
       }
     ],
+    feedKeywords: [
+      "유기농",
+      "프리미엄",
+      "임신용",
+      "다이어트",
+      "모질개선용",
+      "피부개선용",
+      "뼈/관절 강화",
+      "위/장 개선용",
+      "습식"
+    ],
+    behaviorKeywords: [
+      "제자리 점프",
+      "땅 파기",
+      "넘치는 식욕",
+      "쓰레기통 뒤지기",
+      "소심한 성격",
+      "물건 물어뜯기",
+      "아무데나 배변"
+    ],
     myPet: {
       species: "",
       kind: "",
@@ -42,6 +64,10 @@ class ReserveInfo extends Component {
       agesNum: 1,
       agesTerm: "",
       weight: 1
+    },
+    myOptions: {
+      feeds: [],
+      behaviors: []
     }
   };
 
@@ -54,6 +80,7 @@ class ReserveInfo extends Component {
       }
     }));
   };
+
   changeKinds = item => {
     this.setState(prevState => ({
       myPet: {
@@ -62,6 +89,7 @@ class ReserveInfo extends Component {
       }
     }));
   };
+
   changeGender = item => {
     this.setState(prevState => ({
       myPet: {
@@ -70,6 +98,42 @@ class ReserveInfo extends Component {
       }
     }));
   };
+
+  changeAgesTerm = item => {
+    this.setState(prevState => ({
+      myPet: {
+        ...prevState.myPet,
+        agesTerm: item
+      }
+    }));
+  };
+
+  resetKeywords = state => {
+    this.setState({
+      state: []
+    });
+  };
+
+  addKeywords = (stateName, item) => {
+    this.setState(prevState => ({
+      myOptions: {
+        ...prevState.myOptions,
+        [stateName]: prevState.myOptions[stateName].concat(item)
+      }
+    }));
+  };
+
+  removeKeyWords = (stateName, item) => {
+    this.setState(prevState => ({
+      myOptions: {
+        ...prevState.myOptions,
+        [stateName]: prevState.myOptions[stateName].filter(
+          beforeItem => beforeItem !== item
+        )
+      }
+    }));
+  };
+
   handleChangeAge = e => {
     const value = e.target.value;
     this.setState(prevState => ({
@@ -79,14 +143,7 @@ class ReserveInfo extends Component {
       }
     }));
   };
-  changeAgesTerm = item => {
-    this.setState(prevState => ({
-      myPet: {
-        ...prevState.myPet,
-        agesTerm: item
-      }
-    }));
-  };
+
   handleChangeWeight = index => {
     this.setState(prevState => ({
       myPet: {
@@ -98,7 +155,20 @@ class ReserveInfo extends Component {
 
   render() {
     const { name } = this.props;
-    const { species, kinds, agesTerm, genders, weights, myPet } = this.state;
+    const {
+      species,
+      kinds,
+      agesTerm,
+      genders,
+      weights,
+      feedKeywords,
+      behaviorKeywords,
+      myPet,
+      myOptions
+    } = this.state;
+    const inputVerify = () => {
+      return Object.values(myPet).some(item => !item);
+    };
     return (
       <div className="reserve-info">
         <section className="reserve-section">
@@ -182,20 +252,46 @@ class ReserveInfo extends Component {
         <section className="reserve-section">
           <h2 className="reserve-title">
             <em className="name">{name}</em>에 대한 교육을 준비하고 있어요,
-            <br />혹시 더 알고 싶은 것이 있나요
+            <br />혹시 더 알고 싶은 것이 있나요?
           </h2>
-          <section className="reserve-option">
-            <h3 className="reserve-option__title">
-              <div className="reserve-switch reserve-switch--on" />
-              <em className="name">{name}</em>의 맞춤사료를 추천 받고 싶어요
-            </h3>
-          </section>
-          <section>
-            <h3 className="reserve-option__title">
-              <div className="reserve-switch" />
-              <em className="name">{name}</em>의 맞춤사료를 추천 받고 싶어요
-            </h3>
-          </section>
+          <ReserveOptions
+            title={
+              <React.Fragment>
+                <em className="name">{name}</em>에 대한 추천가이드를
+              </React.Fragment>
+            }
+            data={feedKeywords}
+            selectedData={myOptions.feeds}
+            onReset={() => this.resetKeywords(myOptions.feeds)}
+            onAddSelect={item => this.addKeywords(myOptions.feeds, item)}
+            onRemoveSelect={item => this.removeKeywords(myOptions.feeds, item)}
+          />
+          <ReserveOptions
+            title={
+              <React.Fragment>
+                <em className="name">{name}</em>의 이상행동에 대한 가이드를
+              </React.Fragment>
+            }
+            data={behaviorKeywords}
+            selectedData={myOptions.behaviors}
+            onReset={() => this.resetKeywords("behaviors")}
+            onAddSelect={item => this.addKeywords("behaviors", item)}
+            onRemoveSelect={item => this.removeKeywords("behaviors", item)}
+          />
+        </section>
+        <section className="reserve-section">
+          <h2 className="reserve-title">
+            이제 <em className="name">{name}</em>의 가이드를 보러갈까요?
+          </h2>
+          <div
+            className={`reserve-button-box ${
+              inputVerify() ? "reserve-button-box--disabled" : ""
+            }`}
+          >
+            <Link className="reserve-button" to="/step/2">
+              Go !!!
+            </Link>
+          </div>
         </section>
       </div>
     );

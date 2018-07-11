@@ -525,6 +525,17 @@ em.name {
   margin-top: 2em;
   color: #fff;
   font-weight: bold;
+  position: relative;
+}
+
+.reserve-button-box--disabled:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .reserve-weight {
@@ -679,6 +690,54 @@ em.name {
   background-color: #36cfc9;
   left: auto;
   right: 5px;
+}
+
+.reserve-option {
+  margin-top: 3em;
+}
+
+.reserve-option__button {
+  border-radius: 50px;
+  padding: 4px 10px;
+  margin: 0.5em;
+  border: 0;
+  background-color: transparent;
+  color: #08979c;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reserve-option__button--disabled {
+  color: #bfbfbf;
+}
+
+.reserve-keywords {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reserve-keywords__item {
+  margin: 0.5em;
+  padding: 4px 18px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid #08979c;
+  color: #08979c;
+  cursor: pointer;
+}
+
+.reserve-keywords__item:not(:disabled):hover {
+  background-color: rgba(8, 151, 156, 0.2);
+}
+
+.reserve-keywords__item:disabled {
+  border-color: #bfbfbf;
+  color: #bfbfbf;
+}
+
+.reserve-keywords__item--selected {
+  background-color: #08979c;
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) {
