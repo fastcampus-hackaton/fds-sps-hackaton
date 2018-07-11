@@ -6,6 +6,7 @@ import Reserve from "./components/Reserve";
 import StandardResultPage from "./pages/StandardResultPage";
 import OptionResultPage from "./pages/OptionResultPage";
 import VideoResultPage from "./pages/VideoResultPage";
+import StartHomePage from "./pages/StartHomePage";
 
 class App extends Component {
   render() {
@@ -14,12 +15,12 @@ class App extends Component {
         <DataProvider>
           <div className="App">
             <Switch>
-              <Route path="/home" component={Home} />
+              <Route path="/home" component={StartHomePage} />
               <Route path="/reserve" component={Reserve} />
               <Route path="/result" component={StandardResultPage} />
               <Route path="/oresult" component={OptionResultPage} />
               <Route path="/vresult" component={VideoResultPage} />
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={StartHomePage} />
             </Switch>
           </div>
         </DataProvider>

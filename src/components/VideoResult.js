@@ -3,8 +3,8 @@ import React from "react";
 export default class VideoResult extends React.Component {
   render() {
     return (
-      <div className="wrapper">
-        <h1>사회화 훈련 교육자료</h1>
+      <div className="video-wrapper">
+        <h1 className="title is-3">사회화 훈련 교육자료</h1>
         <div className="edu-video">
           <iframe
             id="ytplayer"
