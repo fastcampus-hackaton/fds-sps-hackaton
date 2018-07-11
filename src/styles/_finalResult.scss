@@ -1,0 +1,49 @@
+.wrapper {
+  display: block;
+  width: 1000px;
+  margin: 0 auto;
+  //background: #c2aaba;;
+  text-align: center;
+
+  .dog-img {
+    float: left;
+    text-align: left;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+  }
+
+  .dog-info {
+    float: left;
+    margin-left: 60px;
+    margin-top: 80px;
+    border: 1px solid black;
+  }
+
+  .info {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid black;
+  }
+  .input-text {
+    font-size: 2rem;
+  }
+
+  .suggest-section {
+    border: solid 1px black;
+    margin-bottom: 10px;
+  }
+
+  .test {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: solid 1px black;
+    margin: 10px;
+  }
+
+  .guideline {
+    border: solid 1px black;
+    margin-bottom: 10px;
+  }
+}
