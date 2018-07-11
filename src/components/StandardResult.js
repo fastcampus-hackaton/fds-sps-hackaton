@@ -58,7 +58,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절</p>
                   <p className="subtitle">목줄을 꼭 해주세요.</p>
@@ -68,7 +71,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절</p>
                   <p className="subtitle">배변 </p>
@@ -78,7 +84,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절3</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -88,7 +97,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절4</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -98,7 +110,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절5</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -108,7 +123,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절6</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -143,7 +161,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절1</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -153,7 +174,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절2</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -163,7 +187,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절3</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -173,7 +200,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절4</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -183,7 +213,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절5</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
@@ -193,7 +226,10 @@ export default class StandardResult extends React.Component {
               <div className="tile is-parent test">
                 <article className="tile is-child box">
                   <figure className="image">
-                    <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                    <img
+                      alt=""
+                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    />
                   </figure>
                   <p className="title">산책 예절6</p>
                   <p className="subtitle">Fri 27 Nov 2016</p>
