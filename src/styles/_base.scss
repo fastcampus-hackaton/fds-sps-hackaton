@@ -1,4 +1,10 @@
 // reset
+@import "./normalize";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,4 +13,7 @@ body {
 }
 a {
   color: inherit;
+  &:link {
+    text-decoration: none;
+  }
 }

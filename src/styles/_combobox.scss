@@ -1,11 +1,14 @@
 .combobox {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
+  text-align: left;
   &-select {
     width: 100%;
-    height: 30px;
+    line-height: 1.5;
     padding: 4px 10px;
     border-bottom: 2px solid $color-6;
+    box-sizing: border-box;
     &--default {
       color: #8c8c8c;
     }

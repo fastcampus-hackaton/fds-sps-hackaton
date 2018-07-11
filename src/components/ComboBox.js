@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export default class ComboBox extends Component {
   static defaultProps = {
+    styles: {}, // 스타일
     options: [], // 옵션
     selected: "", // 선택된 값
     defaultText: "", // 디폴트 텍스트
@@ -33,7 +34,7 @@ export default class ComboBox extends Component {
   comboRef = React.createRef();
 
   render() {
-    const { options, defaultText, selected } = this.props;
+    const { styles, options, defaultText, selected } = this.props;
     const { visible } = this.state;
     return (
       <div
@@ -42,6 +43,7 @@ export default class ComboBox extends Component {
         onFocus={this.handleShow}
         ref={this.comboRef}
         tabIndex={visible ? 1 : 0}
+        style={styles}
       >
         <div
           className={
