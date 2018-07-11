@@ -1,6 +1,10 @@
 .video-wrapper {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 700px;
+
+  .box {
+    text-align: center;
+  }
 }

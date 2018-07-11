@@ -10,7 +10,7 @@ export default class VideoResult extends React.Component {
     return (
       <div className="home">
         <div className="home-wrapper">
-          <div className="home-content box">
+          <div className="home-content box is-shady">
             <div>당신의 반려동물을 위한</div>
             <div>교육 추천 가이드를 받으세요.</div>
             <Link to="/reserve/1">
