@@ -17,6 +17,7 @@ em.name {
 .reserve-section {
   text-align: center;
   font-size: 1.167em;
+  animation: fadeIn 1s ease-in-out;
   &__paragraph {
     margin-top: 1.5em;
   }
@@ -25,6 +26,14 @@ em.name {
     &-select {
       text-align: right;
     }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -226,6 +235,7 @@ em.name {
     background-color: transparent;
     border: 1px solid $color-7;
     color: $color-7;
+    transition: all 0.2s;
     cursor: pointer;
     &:not(:disabled):hover {
       background-color: rgba($color-7, 0.2);
@@ -237,6 +247,9 @@ em.name {
     &--selected {
       background-color: $color-7;
       color: #fff;
+      &:hover {
+        background-color: $color-8 !important;
+      }
     }
   }
 }

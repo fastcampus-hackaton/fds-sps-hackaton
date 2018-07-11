@@ -479,6 +479,8 @@ em.name {
 .reserve-section {
   text-align: center;
   font-size: 1.167em;
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
 }
 
 .reserve-section__paragraph {
@@ -491,6 +493,24 @@ em.name {
 
 .reserve-section .combobox-select {
   text-align: right;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .reserve-input {
@@ -723,6 +743,8 @@ em.name {
   background-color: transparent;
   border: 1px solid #08979c;
   color: #08979c;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   cursor: pointer;
 }
 
@@ -738,6 +760,10 @@ em.name {
 .reserve-keywords__item--selected {
   background-color: #08979c;
   color: #fff;
+}
+
+.reserve-keywords__item--selected:hover {
+  background-color: #006d75 !important;
 }
 
 @media screen and (min-width: 768px) {

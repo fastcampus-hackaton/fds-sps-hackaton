@@ -16,7 +16,7 @@ class ReserveInfo extends Component {
       dogs: ["스피츠", "섀퍼드", "말티즈"],
       cats: ["코리안 숏컷", "아메리칸 숏컷", "페르시안"]
     },
-    agesTerm: ["주", "개월", "연"],
+    agesTerm: ["주", "개월", "살"],
     genders: ["암컷", "수컷"],
     weights: [
       {
@@ -63,7 +63,7 @@ class ReserveInfo extends Component {
       gender: "",
       agesNum: 1,
       agesTerm: "",
-      weight: 1
+      weight: 0
     },
     myOptions: {
       feeds: [],
@@ -108,10 +108,13 @@ class ReserveInfo extends Component {
     }));
   };
 
-  resetKeywords = state => {
-    this.setState({
-      state: []
-    });
+  resetKeywords = stateName => {
+    this.setState(prevState => ({
+      myOptions: {
+        ...prevState.myOptions,
+        [stateName]: []
+      }
+    }));
   };
 
   addKeywords = (stateName, item) => {
@@ -123,7 +126,7 @@ class ReserveInfo extends Component {
     }));
   };
 
-  removeKeyWords = (stateName, item) => {
+  removeKeywords = (stateName, item) => {
     this.setState(prevState => ({
       myOptions: {
         ...prevState.myOptions,
@@ -166,9 +169,7 @@ class ReserveInfo extends Component {
       myPet,
       myOptions
     } = this.state;
-    const inputVerify = () => {
-      return Object.values(myPet).some(item => !item);
-    };
+    const inputVerify = Object.values(myPet).some(item => !item);
     return (
       <div className="reserve-info">
         <section className="reserve-section">
@@ -217,7 +218,7 @@ class ReserveInfo extends Component {
             정도 되었어요.
           </div>
         </section>
-        <section className="reserve-section">
+        <section className="reserve-section" ref={this.sectionRef}>
           <h2 className="reserve-title">
             <em className="name">{name}</em>에 대해서 조금 더 자세히 말해줄래요?
           </h2>
@@ -237,9 +238,9 @@ class ReserveInfo extends Component {
                 <div className="weight-photo" />
                 <div
                   className={`weight-txt ${
-                    myPet.weight === index ? "weight-txt--current" : ""
+                    myPet.weight === index + 1 ? "weight-txt--current" : ""
                   }`}
-                  onClick={() => this.handleChangeWeight(index)}
+                  onClick={() => this.handleChangeWeight(index + 1)}
                 >
                   <div className="weight-checkbox" />
                   <div className="weight-title">{item.title}</div>
@@ -249,50 +250,50 @@ class ReserveInfo extends Component {
             ))}
           </div>
         </section>
-        <section className="reserve-section">
-          <h2 className="reserve-title">
-            <em className="name">{name}</em>에 대한 교육을 준비하고 있어요,
-            <br />혹시 더 알고 싶은 것이 있나요?
-          </h2>
-          <ReserveOptions
-            title={
-              <React.Fragment>
-                <em className="name">{name}</em>에 대한 추천가이드를
-              </React.Fragment>
-            }
-            data={feedKeywords}
-            selectedData={myOptions.feeds}
-            onReset={() => this.resetKeywords(myOptions.feeds)}
-            onAddSelect={item => this.addKeywords(myOptions.feeds, item)}
-            onRemoveSelect={item => this.removeKeywords(myOptions.feeds, item)}
-          />
-          <ReserveOptions
-            title={
-              <React.Fragment>
-                <em className="name">{name}</em>의 이상행동에 대한 가이드를
-              </React.Fragment>
-            }
-            data={behaviorKeywords}
-            selectedData={myOptions.behaviors}
-            onReset={() => this.resetKeywords("behaviors")}
-            onAddSelect={item => this.addKeywords("behaviors", item)}
-            onRemoveSelect={item => this.removeKeywords("behaviors", item)}
-          />
-        </section>
-        <section className="reserve-section">
-          <h2 className="reserve-title">
-            이제 <em className="name">{name}</em>의 가이드를 보러갈까요?
-          </h2>
-          <div
-            className={`reserve-button-box ${
-              inputVerify() ? "reserve-button-box--disabled" : ""
-            }`}
-          >
-            <Link className="reserve-button" to="/step/2">
-              Go !!!
-            </Link>
-          </div>
-        </section>
+        {!inputVerify && (
+          <React.Fragment>
+            <section className="reserve-section">
+              <h2 className="reserve-title">
+                <em className="name">{name}</em>에 대한 교육을 준비하고 있어요,
+                <br />혹시 더 알고 싶은 것이 있나요?
+              </h2>
+              <ReserveOptions
+                title={
+                  <React.Fragment>
+                    <em className="name">{name}</em>에 대한 추천가이드를
+                  </React.Fragment>
+                }
+                data={feedKeywords}
+                selectedData={myOptions.feeds}
+                onReset={() => this.resetKeywords("feeds")}
+                onAddSelect={item => this.addKeywords("feeds", item)}
+                onRemoveSelect={item => this.removeKeywords("feeds", item)}
+              />
+              <ReserveOptions
+                title={
+                  <React.Fragment>
+                    <em className="name">{name}</em>의 이상행동에 대한 가이드를
+                  </React.Fragment>
+                }
+                data={behaviorKeywords}
+                selectedData={myOptions.behaviors}
+                onReset={() => this.resetKeywords("behaviors")}
+                onAddSelect={item => this.addKeywords("behaviors", item)}
+                onRemoveSelect={item => this.removeKeywords("behaviors", item)}
+              />
+            </section>
+            <section className="reserve-section">
+              <h2 className="reserve-title">
+                이제 <em className="name">{name}</em>의 가이드를 보러갈까요?
+              </h2>
+              <div className="reserve-button-box">
+                <Link className="reserve-button" to="/step/2">
+                  Go !!!
+                </Link>
+              </div>
+            </section>
+          </React.Fragment>
+        )}
       </div>
     );
   }
