@@ -30,7 +30,7 @@ export default class OptionResult extends React.Component {
           </div>
         </div>
         <div className="guideline">
-          <div className="box">
+          <div className="box is-shady">
             <h2 className="title is-3">Standard Guide</h2>
             <h3 className="title is-4">스피츠</h3>
             <p>
@@ -56,7 +56,7 @@ export default class OptionResult extends React.Component {
           <div>
             <Slider {...settings}>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -69,7 +69,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -82,7 +82,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -95,7 +95,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -108,7 +108,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -121,7 +121,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -137,7 +137,7 @@ export default class OptionResult extends React.Component {
           </div>
         </div>
         <div className="guideline">
-          <div className="box">
+          <div className="box is-shady">
             <h2 className="title is-3">6주차</h2>
             <p>종합백신(DHPPL)과 코로나 장염 예방접종이 필요한 시기입니다.</p>
             <p>
@@ -159,7 +159,7 @@ export default class OptionResult extends React.Component {
           <div>
             <Slider {...settings}>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -172,7 +172,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -185,7 +185,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -198,7 +198,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -211,7 +211,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -224,7 +224,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -240,7 +240,7 @@ export default class OptionResult extends React.Component {
           </div>
         </div>
         <div className="guideline">
-          <div className="box">
+          <div className="box is-shady">
             <h2 className="title is-3">마른체형이에요.</h2>
             <p>먹이를 조금만 더 주셔도 괜찮아요 스피츠는 항상 배고프답니다.</p>
             <p>
@@ -264,7 +264,7 @@ export default class OptionResult extends React.Component {
           <div>
             <Slider {...settings}>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -277,7 +277,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -290,7 +290,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -303,7 +303,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -316,7 +316,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
@@ -329,7 +329,7 @@ export default class OptionResult extends React.Component {
                 </article>
               </div>
               <div className="tile is-parent test">
-                <article className="tile is-child box">
+                <article className="tile is-child box is-shady">
                   <figure className="image">
                     <img
                       alt=""
