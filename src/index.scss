@@ -1,10 +1,9 @@
-@import "../node_modules/bulma/sass/utilities/_all";
-@import "../node_modules/bulma/sass/elements/icon";
 @import "../node_modules/bulma/bulma.sass";
 @import "styles/variables";
 @import "styles/base";
 
 // component
+@import "styles/steps";
 @import "styles/combobox";
 @import "styles/reserve";
 @import "styles/layout";
