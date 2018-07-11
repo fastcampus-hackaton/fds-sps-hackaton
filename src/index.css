@@ -58,6 +58,13 @@
   color: black;
 }
 
+.wrapper {
+  display: block;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 body {
   margin: 0;
   padding: 0;

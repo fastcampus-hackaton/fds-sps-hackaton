@@ -4,6 +4,7 @@ import { DataProvider } from "./contexts/DataContext";
 import Reserve from "./components/Reserve";
 import StandardResult from "./components/StandardResult";
 import OptionResult from "./components/OptionResult";
+import VideoResult from "./components/VideoResult";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
               <Route path="/reserve" component={Reserve} />
               <Route path="/result" component={StandardResult} />
               <Route path="/oresult" component={OptionResult} />
+              <Route path="/vresult" component={VideoResult} />
               <Route exact path="/" component={Home} />
             </Switch>
           </div>
