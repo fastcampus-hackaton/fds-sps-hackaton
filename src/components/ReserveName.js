@@ -42,7 +42,7 @@ class ReserveName extends Component {
             !name ? "reserve-button-box--disabled" : ""
           }`}
         >
-          <Link className="reserve-button" to="/step/2">
+          <Link className="reserve-button" to="/reserve/2">
             조금 더 소개할까요?
           </Link>
         </div>

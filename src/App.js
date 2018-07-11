@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { DataProvider } from "./contexts/DataContext";
-import ReserveName from "./components/ReserveName";
-import ReserveInfo from "./components/ReserveInfo";
+
+import StandardResultPage from "./pages/StandardResultPage";
+import ReserveNamePage from "./pages/ReserveNamePage";
+import ReserveInfoPage from "./pages/ReserveInfoPage";
+import OptionResultPage from "./pages/OptionResultPage";
+import VideoResultPage from "./pages/VideoResultPage";
+import StartHomePage from "./pages/StartHomePage";
 
 class App extends Component {
   render() {
@@ -11,20 +16,19 @@ class App extends Component {
         <DataProvider>
           <div className="App">
             <Switch>
-              <Route path="/home" component={Home} />
-              <Route path="/step/1" component={ReserveName} />
-              <Route path="/step/2" component={ReserveInfo} />
-              <Route exact path="/" component={Home} />
+              <Route path="/home" component={StartHomePage} />
+              <Route path="/reserve/1" component={ReserveNamePage} />
+              <Route path="/reserve/2" component={ReserveInfoPage} />
+              <Route path="/result" component={StandardResultPage} />
+              <Route path="/oresult" component={OptionResultPage} />
+              <Route path="/vresult" component={VideoResultPage} />
+              <Route exact path="/" component={StartHomePage} />
             </Switch>
           </div>
         </DataProvider>
       </BrowserRouter>
     );
   }
-}
-
-function Home() {
-  return <div />;
 }
 
 export default App;
