@@ -1,40 +1,52 @@
-.wrapper {
+.result-section {
   display: block;
-  width: 1000px;
-  margin: 0 auto;
-  //background: #c2aaba;;
+  max-width: 1000px;
+  margin: 3.5em auto 8em;
   text-align: center;
+  .result-title {
+    font-family: $primary-font;
+    font-size: 1.8em;
+  }
 
   .dog-img {
     float: left;
     text-align: left;
     width: 200px;
     height: 200px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .result-info {
+    overflow: hidden;
+    margin: 3em 2em 1.5em;
   }
 
   .dog-info {
     float: left;
     margin-left: 60px;
     margin-top: 80px;
-    // border: 1px solid black;
-    &_input {
-      font-size: 2.5rem;
+    font-size: 1.167em;
+    &__input {
+      font-family: $primary-font;
+      font-size: 2.2rem;
+      &--em {
+        color: $color-7;
+      }
     }
   }
 
-  .info {
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    // border: 1px solid black;
-  }
   .input-text {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   .suggest-section {
-    // border: solid 1px black;
-    margin: 80px auto;
+    margin: 2em auto;
+    .title {
+      font-family: $primary-font;
+      font-size: 1.6em;
+    }
   }
 
   .test {
@@ -44,8 +56,16 @@
   }
 
   .guideline {
-    // border: solid 1px black;
-    margin: 80px auto;
+    margin: 2rem auto;
+    .title {
+      margin-top: 0.8em;
+      font-family: $primary-font;
+      font-size: 2.2em;
+    }
+    p {
+      margin-top: 0.8em;
+      line-height: 1.5;
+    }
   }
 
   .behavior {

@@ -11479,7 +11479,9 @@ em.name {
 }
 
 .contents-step {
+  margin: 0 auto;
   padding: 2em 1em 1em;
+  max-width: 1200px;
   font-family: "Fredoka One", "Jua", sans-serif;
 }
 
@@ -11501,55 +11503,85 @@ em.name {
   }
 }
 
-.wrapper {
+.result-section {
   display: block;
-  width: 1000px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 3.5em auto 8em;
   text-align: center;
 }
 
-.wrapper .dog-img {
+.result-section .result-title {
+  font-family: "Fredoka One", "Jua", sans-serif;
+  font-size: 1.8em;
+}
+
+.result-section .dog-img {
   float: left;
   text-align: left;
   width: 200px;
   height: 200px;
 }
 
-.wrapper .dog-info {
+.result-section .dog-img img {
+  width: 100%;
+}
+
+.result-section .result-info {
+  overflow: hidden;
+  margin: 3em 2em 1.5em;
+}
+
+.result-section .dog-info {
   float: left;
   margin-left: 60px;
   margin-top: 80px;
+  font-size: 1.167em;
 }
 
-.wrapper .dog-info_input {
-  font-size: 2.5rem;
+.result-section .dog-info__input {
+  font-family: "Fredoka One", "Jua", sans-serif;
+  font-size: 2.2rem;
 }
 
-.wrapper .info {
-  overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.result-section .dog-info__input--em {
+  color: #08979c;
 }
 
-.wrapper .input-text {
-  font-size: 2rem;
+.result-section .input-text {
+  font-size: 2em;
 }
 
-.wrapper .suggest-section {
-  margin: 80px auto;
+.result-section .suggest-section {
+  margin: 2em auto;
 }
 
-.wrapper .test {
+.result-section .suggest-section .title {
+  font-family: "Fredoka One", "Jua", sans-serif;
+  font-size: 1.6em;
+}
+
+.result-section .test {
   display: inline-block;
   width: 200px;
   height: 300px;
 }
 
-.wrapper .guideline {
-  margin: 80px auto;
+.result-section .guideline {
+  margin: 2rem auto;
 }
 
-.wrapper .behavior {
+.result-section .guideline .title {
+  margin-top: 0.8em;
+  font-family: "Fredoka One", "Jua", sans-serif;
+  font-size: 2.2em;
+}
+
+.result-section .guideline p {
+  margin-top: 0.8em;
+  line-height: 1.5;
+}
+
+.result-section .behavior {
   width: 350px;
   height: 350px;
 }
@@ -11681,7 +11713,9 @@ em.name {
 }
 
 .contents-step {
+  margin: 0 auto;
   padding: 2em 1em 1em;
+  max-width: 1200px;
   font-family: "Fredoka One", "Jua", sans-serif;
 }
 
