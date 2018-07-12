@@ -10,7 +10,7 @@ class ReserveOptions extends Component {
     onAddSelect: () => {}
   };
   state = {
-    visible: false
+    visible: true
   };
   handleOff = () => {
     this.setState({
@@ -36,22 +36,24 @@ class ReserveOptions extends Component {
       <section className="reserve-option">
         <h3 className="reserve-option__title">
           {title}
-          <button
-            className={`reserve-option__button ${
-              !visible ? "reserve-option__button--disabled" : ""
-            }`}
-            onClick={this.handleOn}
-          >
-            받고 싶어요
-          </button>/
-          <button
-            className={`reserve-option__button ${
-              visible ? "reserve-option__button--disabled" : ""
-            }`}
-            onClick={this.handleOff}
-          >
-            싶지 않아요
-          </button>
+          <span className="reserve-option__button-box">
+            <button
+              className={`reserve-option__button ${
+                !visible ? "reserve-option__button--disabled" : ""
+              }`}
+              onClick={this.handleOn}
+            >
+              받고 싶어요
+            </button>/
+            <button
+              className={`reserve-option__button ${
+                visible ? "reserve-option__button--disabled" : ""
+              }`}
+              onClick={this.handleOff}
+            >
+              싶지 않아요
+            </button>
+          </span>
         </h3>
         <div className="reserve-keywords">
           {data.map(
