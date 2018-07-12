@@ -3,30 +3,37 @@
   max-width: 1000px;
   margin: 3.5em auto 8em;
   text-align: center;
+  @include dp-mobile {
+    margin: 2em 1em 6em;
+  }
   .result-title {
     font-family: $primary-font;
     font-size: 1.8em;
   }
 
+  .result-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 3em 2em 1.5em;
+  }
+
   .dog-img {
-    float: left;
-    text-align: left;
+    flex: none;
     width: 200px;
     height: 200px;
+    @include dp-mobile {
+      width: 100px;
+      height: 100px;
+    }
     img {
       width: 100%;
     }
   }
 
-  .result-info {
-    overflow: hidden;
-    margin: 3em 2em 1.5em;
-  }
-
   .dog-info {
-    float: left;
-    margin-left: 60px;
-    margin-top: 80px;
+    padding-left: 60px;
     font-size: 1.167em;
     &__input {
       font-family: $primary-font;
@@ -43,7 +50,10 @@
 
   .suggest-section {
     margin: 5em auto 2em;
-    padding-bottom: 20px;
+    padding: 0 60px 20px;
+    @include dp-mobile {
+      padding: 0 0 20px;
+    }
     .title {
       font-family: $primary-font;
       font-size: 1.6em;
@@ -73,6 +83,9 @@
     p {
       margin-top: 0.8em;
       line-height: 1.5;
+      @include dp-mobile {
+        font-size: 14px;
+      }
     }
   }
 
@@ -93,12 +106,24 @@
     color: $color-6;
   }
 }
+.slick-list {
+  z-index: 1;
+}
 .slick-prev {
   left: -50px;
+  z-index: 5;
+  border-radius: 100%;
+  @include dp-mobile {
+    display: none;
+  }
   @extend %slick-arrow-default;
 }
 .slick-next {
+  z-index: 5;
   right: -50px;
+  @include dp-mobile {
+    display: none;
+  }
   @extend %slick-arrow-default;
 }
 
@@ -138,6 +163,7 @@
     font-family: $primary-font;
     font-size: 1.8em;
     position: relative;
+    word-break: break-all;
     &:after {
       content: "";
       position: absolute;
@@ -150,6 +176,7 @@
   }
   &__thumbnail {
     flex-basis: 40%;
+    flex-shrink: 0;
   }
   &__txt {
     padding-top: 1em;

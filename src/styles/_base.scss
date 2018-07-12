@@ -7,6 +7,17 @@
 }
 $primary-font: "Fredoka One", "Jua", sans-serif;
 
+@mixin dp-mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+html {
+  @include dp-mobile {
+    font-size: 0.8em;
+  }
+}
 html,
 #root,
 .App {
