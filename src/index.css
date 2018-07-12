@@ -11902,6 +11902,7 @@ em.name {
 }
 
 .video-wrapper {
+  font-family: "Fredoka One", "Jua", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
