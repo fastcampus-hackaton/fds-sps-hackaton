@@ -11560,6 +11560,10 @@ em.name {
   font-size: 1.6em;
 }
 
+.result-section .suggest-section .food-box {
+  height: 480px;
+}
+
 .result-section .test {
   display: inline-block;
   width: 200px;
