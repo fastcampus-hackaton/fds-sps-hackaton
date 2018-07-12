@@ -325,7 +325,12 @@ class OptionResult extends React.Component {
                     </figure>
                     <p className="title">뉴트리소스 어덜트 애견사료</p>
                     <p className="subtitle">52,900원</p>
-                    <a className="button is-primary is-outlined">
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Nutri-Source/Nutri-Source-Adult-Dog-Food-1496kg/p/509237"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       사료사러 가기
                     </a>
                   </article>
@@ -342,7 +347,12 @@ class OptionResult extends React.Component {
                       커클랜드 시그니춰 프리미엄 애견 사료
                     </p>
                     <p className="subtitle">47,900원</p>
-                    <a className="button is-primary is-outlined">
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Baby-KidsToysPets/Pet-Supplies/Dog-Food/Kirkland-Signature-Premium-Dog-Food-1587kg/p/470974"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       사료사러 가기
                     </a>
                   </article>
@@ -357,7 +367,12 @@ class OptionResult extends React.Component {
                     </figure>
                     <p className="title">뉴트리소스 라지브리드 퍼피 애견사료</p>
                     <p className="subtitle">47,990원</p>
-                    <a className="button is-primary is-outlined">
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Baby-KidsToysPets/Pet-Supplies/Dog-Food/Nutri-Source-Large-Breed-Puppy-Food-136kg/p/509235"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       사료사러 가기
                     </a>
                   </article>
@@ -374,7 +389,12 @@ class OptionResult extends React.Component {
                       뉴트리소스 애견사료, 그레인프리 치킨
                     </p>
                     <p className="subtitle">39,990원</p>
-                    <a className="button is-primary is-outlined">
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Nutri-Source/Nutri-Source-Dog-Food-Grain-Free-Chicken-68kg/p/509238"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       사료사러 가기
                     </a>
                   </article>
