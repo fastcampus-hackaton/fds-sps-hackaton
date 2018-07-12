@@ -16,6 +16,10 @@
 .contents {
   min-height: 500px;
   min-height: calc(100vh - 300px);
+  @include dp-mobile {
+    min-height: 200px;
+    min-height: calc(100vh - 176px);
+  }
   &-step {
     margin: 0 auto;
     padding: 2em 1em 1em;

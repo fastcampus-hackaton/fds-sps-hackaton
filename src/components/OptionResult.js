@@ -50,14 +50,32 @@ class OptionResult extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 4
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     const foodSettings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 2,
-      slidesToScroll: 2
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     const weight = this.state.conditions[myPet.weight - 1];
     return (
