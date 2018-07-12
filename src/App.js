@@ -21,7 +21,7 @@ class App extends Component {
               <Route path="/reserve/2" component={ReserveInfoPage} />
               {/* <Route path="/result" component={StandardResultPage} /> */}
               <Route path="/oresult" component={OptionResultPage} />
-              <Route path="/vresult" component={VideoResultPage} />
+              <Route path="/edu/:eduId" component={VideoResultPage} />
               <Route exact path="/" component={StartHomePage} />
             </Switch>
           </div>

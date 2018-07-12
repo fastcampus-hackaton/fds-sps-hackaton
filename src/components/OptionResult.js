@@ -1,6 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import withData from "../hocs/withData";
+import BehaviorContentCard from "../components/BehaviorContentCard";
+import EduContentCard from "../components/EduContentCard";
+
 class OptionResult extends React.Component {
   static defaultProps = {
     name: "", // 이름
@@ -15,7 +18,9 @@ class OptionResult extends React.Component {
     myOptions: {
       feeds: [],
       behaviors: []
-    }
+    },
+    kindsEdu: [],
+    ageEdu: []
   };
   state = {
     conditions: ["저체중", "정상체중", "과체중", "비만"] // 체형
@@ -24,21 +29,21 @@ class OptionResult extends React.Component {
     window.scrollTo(0, 0);
   }
   render() {
-    // const { name, myPet, myOptions } = this.props;
+    const { name, myPet, myOptions, kindsEdu, ageEdu } = this.props;
     // ---- 임시
-    const name = "콩이";
-    const myPet = {
-      species: "멍멍이",
-      kind: "스피츠",
-      gender: "암컷",
-      agesNum: 12,
-      agesTerm: "주",
-      weight: 2
-    };
-    const myOptions = {
-      feeds: ["b9"],
-      behaviors: []
-    };
+    // const name = "콩이";
+    // const myPet = {
+    //   species: "멍멍이",
+    //   kind: "스피츠",
+    //   gender: "암컷",
+    //   agesNum: 12,
+    //   agesTerm: "주",
+    //   weight: 2
+    // };
+    // const myOptions = {
+    //   feeds: ["b9"],
+    //   behaviors: ["A"]
+    // };
     // ---- 임시
     const settings = {
       dots: true,
@@ -93,84 +98,11 @@ class OptionResult extends React.Component {
           <h3 className="title">{myPet.kind} 맞춤 교육을 추천해드려요.</h3>
           <div>
             <Slider {...settings}>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절1</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절2</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절3</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절4</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절5</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절6</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
+              {kindsEdu.map(item => (
+                <div key={item.id} className="slider-card">
+                  <EduContentCard value={item} />
+                </div>
+              ))}
             </Slider>
           </div>
         </section>
@@ -200,84 +132,11 @@ class OptionResult extends React.Component {
           </h3>
           <div>
             <Slider {...settings}>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절1</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절2</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절3</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절4</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절5</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
-              <div className="tile is-parent test">
-                <article className="tile is-child box is-shady">
-                  <figure className="image">
-                    <img
-                      alt=""
-                      src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    />
-                  </figure>
-                  <p className="title">산책 예절6</p>
-                  <p className="subtitle">Fri 27 Nov 2016</p>
-                  <a className="button is-primary is-outlined">교육하러 가기</a>
-                </article>
-              </div>
+              {ageEdu.map(item => (
+                <div key={item.id} className="slider-card">
+                  <EduContentCard value={item} />
+                </div>
+              ))}
             </Slider>
           </div>
         </section>
@@ -407,10 +266,13 @@ class OptionResult extends React.Component {
             <h3 className="title is-3">
               <em className="name">{name}</em>를 위한 이상행동 가이드를 찾았어요
             </h3>
-            <div>
-              <div className="test behavior"> test </div>
-              <div className="test behavior"> test </div>
-            </div>
+            <Slider {...settings} slidesToShow={2}>
+              {behaviorContents.map(item => (
+                <div key={item.id} className="slider-card">
+                  <BehaviorContentCard value={item} />
+                </div>
+              ))}
+            </Slider>
           </div>
         )}
       </section>
@@ -419,3 +281,29 @@ class OptionResult extends React.Component {
 }
 
 export default withData(OptionResult);
+
+const behaviorContents = [
+  {
+    id: 1,
+    title: "땅 파기",
+    thumbnail:
+      "https://cdn.glitch.com/ca1a21f1-ee2b-46c3-8bf9-c61e117b92c6%2Fdig_dog-min.jpg?1531364851068",
+    body:
+      "강아지는 자신만의 공간을 만들 때나 지루함을 느낄 때 종종 땅을 파는 행동을 보이곤 합니다.\n무조건 혼내기보다는 행동의 원인을 파악하는 것이 중요하며, 그에 대한 대처 방안을 마련해야 됩니다.\n심심해서 그런 것이면 산책이나 장난감으로 지루함을 달래주고 녀석의 특별한 공간을 만들어주는 것도 방법입니다."
+  },
+  {
+    id: 2,
+    title: "물건 물어뜯기",
+    thumbnail:
+      "https://cdn.glitch.com/ca1a21f1-ee2b-46c3-8bf9-c61e117b92c6%2Fmess_dog-min.jpg?1531364851167",
+    body:
+      "시기가 지났음에도 강아지가 전선이나 가구, 신발 등을 물어 뜯어 못 쓰게 되는 경우가 종종 있습니다.\n하지만 가장 큰 이유는 '관심'이 필요하기 때문입니다.\n양말 같은 생활용품으로 놀아주는 것을 자제하고 전용 장난감으로 놀아주는 것을 권합니다. 껌을 주는 것도 좋은 방법입니다."
+  },
+  {
+    id: 3,
+    title: "asdfasdfasdf",
+    thumbnail:
+      "https://cdn.glitch.com/ca1a21f1-ee2b-46c3-8bf9-c61e117b92c6%2Fdig_dog-min.jpg?1531364851068",
+    body: "dumy"
+  }
+];
