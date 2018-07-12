@@ -21,7 +21,7 @@ class App extends Component {
               <Route path="/reserve/2" component={ReserveInfoPage} />
               {/* <Route path="/result" component={StandardResultPage} /> */}
               <Route path="/oresult" component={OptionResultPage} />
-              <Route path="/edu/:eduId" component={VideoResultPage} />
+              <Route path="/edu/:eduId" component={ViewContents} />
               <Route exact path="/" component={StartHomePage} />
             </Switch>
           </div>
@@ -30,5 +30,10 @@ class App extends Component {
     );
   }
 }
+
+const ViewContents = ({ match }) => {
+  console.log(match);
+  return <VideoResultPage contentsId={match.params.eduId} />;
+};
 
 export default App;
