@@ -48,6 +48,13 @@
       font-family: $primary-font;
       font-size: 1.6em;
     }
+    .food-box {
+      min-height: 500px;
+      padding: 1em;
+      .title {
+        margin-top: 20px;
+      }
+    }
   }
 
   .test {

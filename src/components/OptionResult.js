@@ -52,6 +52,13 @@ class OptionResult extends React.Component {
       slidesToShow: 4,
       slidesToScroll: 4
     };
+    const foodSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2
+    };
     const weight = this.state.conditions[myPet.weight - 1];
     return (
       <section className="result-section">
@@ -166,94 +173,88 @@ class OptionResult extends React.Component {
               추천해보았어요.
             </h3>
             <div>
-              <Slider {...settings}>
-                <div className="tile is-parent test">
-                  <article className="tile is-child box is-shady">
+              <Slider {...foodSettings}>
+                <div className="tile is-parent ">
+                  <article className="tile is-child food-box is-shady">
                     <figure className="image">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://www.costco.co.kr/medias/sys_master/images/ha4/hbe/9867682938910.jpg"
                       />
                     </figure>
-                    <p className="title">산책 예절1</p>
-                    <p className="subtitle">Fri 27 Nov 2016</p>
-                    <a className="button is-primary is-outlined">
-                      교육하러 가기
+                    <p className="title">뉴트리소스 어덜트 애견사료</p>
+                    <p className="subtitle">52,900원</p>
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Nutri-Source/Nutri-Source-Adult-Dog-Food-1496kg/p/509237"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      사료사러 가기
+                    </a>
+                  </article>
+                </div>
+                <div className="tile is-parent ">
+                  <article className="tile is-child food-box is-shady">
+                    <figure className="image">
+                      <img
+                        alt=""
+                        src="https://www.costco.co.kr/medias/sys_master/images/h87/ha0/9867731370014.jpg"
+                      />
+                    </figure>
+                    <p className="title">
+                      커클랜드 시그니춰 프리미엄 애견 사료
+                    </p>
+                    <p className="subtitle">47,900원</p>
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Baby-KidsToysPets/Pet-Supplies/Dog-Food/Kirkland-Signature-Premium-Dog-Food-1587kg/p/470974"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      사료사러 가기
                     </a>
                   </article>
                 </div>
                 <div className="tile is-parent test">
-                  <article className="tile is-child box is-shady">
+                  <article className="tile is-child food-box is-shady">
                     <figure className="image">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://www.costco.co.kr/medias/sys_master/images/h95/h9c/9867682316318.jpg"
                       />
                     </figure>
-                    <p className="title">산책 예절2</p>
-                    <p className="subtitle">Fri 27 Nov 2016</p>
-                    <a className="button is-primary is-outlined">
-                      교육하러 가기
+                    <p className="title">뉴트리소스 라지브리드 퍼피 애견사료</p>
+                    <p className="subtitle">47,990원</p>
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Baby-KidsToysPets/Pet-Supplies/Dog-Food/Nutri-Source-Large-Breed-Puppy-Food-136kg/p/509235"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      사료사러 가기
                     </a>
                   </article>
                 </div>
                 <div className="tile is-parent test">
-                  <article className="tile is-child box is-shady">
+                  <article className="tile is-child food-box is-shady">
                     <figure className="image">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://www.costco.co.kr/medias/sys_master/images/h6e/h71/9867682381854.jpg"
                       />
                     </figure>
-                    <p className="title">산책 예절3</p>
-                    <p className="subtitle">Fri 27 Nov 2016</p>
-                    <a className="button is-primary is-outlined">
-                      교육하러 가기
-                    </a>
-                  </article>
-                </div>
-                <div className="tile is-parent test">
-                  <article className="tile is-child box is-shady">
-                    <figure className="image">
-                      <img
-                        alt=""
-                        src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                      />
-                    </figure>
-                    <p className="title">산책 예절4</p>
-                    <p className="subtitle">Fri 27 Nov 2016</p>
-                    <a className="button is-primary is-outlined">
-                      교육하러 가기
-                    </a>
-                  </article>
-                </div>
-                <div className="tile is-parent test">
-                  <article className="tile is-child box is-shady">
-                    <figure className="image">
-                      <img
-                        alt=""
-                        src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                      />
-                    </figure>
-                    <p className="title">산책 예절5</p>
-                    <p className="subtitle">Fri 27 Nov 2016</p>
-                    <a className="button is-primary is-outlined">
-                      교육하러 가기
-                    </a>
-                  </article>
-                </div>
-                <div className="tile is-parent test">
-                  <article className="tile is-child box is-shady">
-                    <figure className="image">
-                      <img
-                        alt=""
-                        src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                      />
-                    </figure>
-                    <p className="title">산책 예절6</p>
-                    <p className="subtitle">Fri 27 Nov 2016</p>
-                    <a className="button is-primary is-outlined">
-                      교육하러 가기
+                    <p className="title">
+                      뉴트리소스 애견사료, 그레인프리 치킨
+                    </p>
+                    <p className="subtitle">39,990원</p>
+                    <a
+                      className="button is-primary is-outlined"
+                      href="https://www.costco.co.kr/Nutri-Source/Nutri-Source-Dog-Food-Grain-Free-Chicken-68kg/p/509238"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      사료사러 가기
                     </a>
                   </article>
                 </div>

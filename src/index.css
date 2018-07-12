@@ -11561,6 +11561,15 @@ em.name {
   font-size: 1.6em;
 }
 
+.result-section .suggest-section .food-box {
+  min-height: 500px;
+  padding: 1em;
+}
+
+.result-section .suggest-section .food-box .title {
+  margin-top: 20px;
+}
+
 .result-section .test {
   display: inline-block;
   width: 200px;
