@@ -24,8 +24,8 @@
     width: 200px;
     height: 200px;
     @include dp-mobile {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
     }
     img {
       width: 100%;
@@ -35,6 +35,9 @@
   .dog-info {
     padding-left: 60px;
     font-size: 1.167em;
+    @include dp-mobile {
+      padding-left: 10px;
+    }
     &__input {
       font-family: $primary-font;
       font-size: 2.2rem;

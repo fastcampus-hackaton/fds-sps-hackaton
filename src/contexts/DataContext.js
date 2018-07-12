@@ -63,9 +63,10 @@ class DataProvider extends Component {
       feeds: [],
       behaviors: []
     },
-    kindsEdu: [
+    eduContents: [
       {
         id: 1,
+        type: "kind",
         code: "iX4mGr25h8o",
         title:
           "[강아지 훈련] 짖는 강아지 훈련 part.2 / 배변교육 / 카밍시그널 l 펫을부탁해",
@@ -74,6 +75,7 @@ class DataProvider extends Component {
       },
       {
         id: 2,
+        type: "kind",
         code: "QgT13KndSLE",
         title: "[보듬교육] 1부｜초보 보호자를 위한 강아지의 첫 1년 세미나",
         body:
@@ -81,27 +83,29 @@ class DataProvider extends Component {
       },
       {
         id: 3,
+        type: "kind",
         code: "Zb5zD9BGfXk",
         title: "[보듬 용쌤의 Tip] 산책 예절 교육을 위한 팁",
         body: "산책예절"
       },
       {
         id: 4,
+        type: "kind",
         code: "kDtSGxpekNc",
         title: "[보듬교육] 2부｜초보 보호자를 위한 강아지의 첫 1년 세미나",
         body: ""
       },
       {
         id: 5,
+        type: "kind",
         code: "3sysIjGyxXE",
         title: "[강형욱의 견종백과] 푸들 편 1부",
         body:
           "강형욱 훈련사님과 보호자님의 생활 밀착형 견종 수다! ‘강형욱의 견종백과’"
-      }
-    ],
-    ageEdu: [
+      },
       {
-        id: 1,
+        id: 6,
+        type: "age",
         code: "a92VMQxfRN0",
         title: "강아지의 성장주기 및 예방접종의 필요성",
         body: `에듀펫 반려동물문화교실 교육센터 : 서울시 서초구 양재천로 123 (양재천 카페거리)
@@ -116,7 +120,8 @@ class DataProvider extends Component {
           `
       },
       {
-        id: 2,
+        id: 7,
+        type: "age",
         code: "GUhaUdqy9hc",
         title: "[개스맨] 광견병에 대한 대한 모든 것과 예방접종 하는 법!ㅣ반해",
         body: `우리 아이들 꼭꼭 맞아야 하는
@@ -124,21 +129,24 @@ class DataProvider extends Component {
           그건 바로 광견병 예방접종이에요~ `
       },
       {
-        id: 3,
+        id: 8,
+        type: "age",
         code: "j0MG9-abUUU",
         title: "(개스맨) 강아지 사료양 계산법! 보호자님은 꼭 보세요! | 반해",
         body: `사료양을 표준보다 적게주면 면역력이 감소하고
         그렇다해서 많이 주게되면 살이 쪄서 비만이 되어요.`
       },
       {
-        id: 4,
+        id: 9,
+        type: "age",
         code: "T_6GlRKUwfI",
         title: "[Q&A] 사료를 급하게 먹는 강아지 - 서지형 클리커트레이너",
         body: `"무엇이든 물어보시개~"
         사료만 부었다하면 게눈감추듯 사라지는 사료!`
       },
       {
-        id: 5,
+        id: 10,
+        type: "age",
         code: "JQjxR0fpNxA",
         title: "세상에 나쁜 개는 없다 - 밥 안 먹는 개 쌤_#002",
         body: `공식 홈페이지 : http://home.ebs.co.kr/baddog/main

@@ -31,9 +31,8 @@ class App extends Component {
   }
 }
 
-const ViewContents = ({ match }) => {
-  console.log(match);
-  return <VideoResultPage contentsId={match.params.eduId} />;
-};
+const ViewContents = ({ match }) => (
+  <VideoResultPage contentsId={match.params.eduId} />
+);
 
 export default App;

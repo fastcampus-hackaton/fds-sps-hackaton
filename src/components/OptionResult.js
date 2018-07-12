@@ -19,8 +19,7 @@ class OptionResult extends React.Component {
       feeds: [],
       behaviors: []
     },
-    kindsEdu: [],
-    ageEdu: []
+    eduContents: []
   };
   state = {
     conditions: ["저체중", "정상체중", "과체중", "비만"] // 체형
@@ -29,22 +28,8 @@ class OptionResult extends React.Component {
     window.scrollTo(0, 0);
   }
   render() {
-    const { name, myPet, myOptions, kindsEdu, ageEdu } = this.props;
-    // ---- 임시
-    // const name = "콩이";
-    // const myPet = {
-    //   species: "멍멍이",
-    //   kind: "스피츠",
-    //   gender: "암컷",
-    //   agesNum: 12,
-    //   agesTerm: "주",
-    //   weight: 2
-    // };
-    // const myOptions = {
-    //   feeds: ["b9"],
-    //   behaviors: ["A"]
-    // };
-    // ---- 임시
+    const { name, myPet, myOptions, eduContents } = this.props;
+
     const settings = {
       dots: true,
       infinite: true,
@@ -78,6 +63,8 @@ class OptionResult extends React.Component {
       ]
     };
     const weight = this.state.conditions[myPet.weight - 1];
+    const kindEdu = eduContents.filter(item => item.type === "kind");
+    const ageEdu = eduContents.filter(item => item.type === "age");
     return (
       <section className="result-section">
         <h2 className="result-title">
@@ -97,7 +84,7 @@ class OptionResult extends React.Component {
             <span className="dog-info__input">
               {myPet.agesNum} {myPet.agesTerm}
             </span>{" "}
-            <span className="dog-info_input">{weight}</span>입니다.
+            <span className="dog-info__input">{weight}</span>입니다.
           </div>
         </div>
         <div className="guideline">
@@ -123,7 +110,7 @@ class OptionResult extends React.Component {
           <h3 className="title">{myPet.kind} 맞춤 교육을 추천해드려요.</h3>
           <div>
             <Slider {...settings}>
-              {kindsEdu.map(item => (
+              {kindEdu.map(item => (
                 <div key={item.id} className="slider-card">
                   <EduContentCard value={item} />
                 </div>
