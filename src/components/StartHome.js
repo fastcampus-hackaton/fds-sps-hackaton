@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import withData from "../hocs/withData";
 
-export default class StartHome extends React.Component {
-  // componentDidMount() {
-  //   window.scrollTo(0, 100);
-  // }
+class StartHome extends React.Component {
+  static defaultProps = {
+    onStartReserve: () => {}
+  };
 
   render() {
     return (
@@ -21,7 +22,11 @@ export default class StartHome extends React.Component {
               맞춤 교육 가이드를 통해<br />
               편리하게 제공되는 교육법을 확인하세요.
             </p>
-            <Link to="/reserve/1" className="home-button">
+            <Link
+              to="/reserve/1"
+              className="home-button"
+              onClick={this.props.onStartReserve}
+            >
               시작하기
             </Link>
           </div>
@@ -30,3 +35,5 @@ export default class StartHome extends React.Component {
     );
   }
 }
+
+export default withData(StartHome);
