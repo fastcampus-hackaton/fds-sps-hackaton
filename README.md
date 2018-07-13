@@ -67,7 +67,7 @@
 ### 개발
 
 - [김상혁(xxsank)](https://github.com/xxsank)
-- [박치헤(chiabi)](https://github.com/chiabi)
+- [박치혜(chiabi)](https://github.com/chiabi)
 
 ## 협업
 
